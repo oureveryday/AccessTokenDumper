@@ -5,9 +5,9 @@ Steam app/package access token dumper utilizing the SteamKit2 library. Supports 
 Modified from https://github.com/SteamRE/DepotDownloader  
 All tokens and keys are global and are always the same to every Steam user, they are not unique to your account and do not identify you.  
 
-### Dumping all depots in the steam account
+### Dumping access tokens in the steam account
 ```
-dotnet DepotDumper.dll -username <username> -password <password> [other options]
+dotnet AccessTokenDumper.dll -username <username> -password <password> [other options]
 ```
 
 ## Parameters
