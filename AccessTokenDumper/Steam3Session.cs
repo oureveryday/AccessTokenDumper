@@ -203,9 +203,10 @@ namespace DepotDumper
 
                 if (select)
                 {
-                    Console.WriteLine("Dump app accesstoken " + appId + "? (Press Y to Dump)");
+                    Console.WriteLine("Dump app accesstoken " + appId + "? (Press Y to Dump/any other key to skip)");
                     if (Console.ReadKey().Key.ToString() == "Y") 
                     {
+                        Console.WriteLine("\n");
                         request.AccessToken = AppTokens[appId];
                         Console.WriteLine("Got app access token for {0}", appId);
                         Program.sw.WriteLine($"{appId};{request.AccessToken}");
@@ -259,12 +260,12 @@ namespace DepotDumper
 
                     if (select)
                     {
-                        Console.WriteLine("Dump package accesstoken " + package + "? (Press Y to Dump)");
+                        Console.WriteLine("Dump package accesstoken " + package + "? (Press Y to Dump/any other key to skip)");
                         if (Console.ReadKey().Key.ToString() == "Y")
                         {
-
-                            Console.WriteLine("Got package access token for {0}", package);
+                            Console.WriteLine("\n");
                             Program.sw2.WriteLine($"{package};{request.AccessToken}");
+                            Console.WriteLine("Got package access token for {0}", package);
                         }
                     }
                     else
